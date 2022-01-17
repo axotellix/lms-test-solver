@@ -7,7 +7,13 @@
     "icons": { "128": "solver-fav.png" },
     "browser_action": {
       "default_icon": "solver-fav.png",
-      "default_popup": "app.html"
+      "default_popup": "extension/ext.html"
     },
-    "permissions": ["activeTab"]
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "permissions": ["tabs"]
 }
