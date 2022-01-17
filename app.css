@@ -1,0 +1,65 @@
+
+/* [ SYSTEM ] */
+:root {
+    
+    /* colours */
+    --background: #0D1117;
+    --primary:    #5CC78D;  
+    --secondary:  #23A4ED;
+    --text:       #f4fffb;
+
+    /* sizes & offsets */
+    --w: 350px;
+    --p: 10px;
+
+}
+
+
+/* [ GENERAL ] */
+* { box-sizing: border-box }
+html {
+    font-family: Montserrat, "Helvetica Neue";
+    font-size: 10px;
+}
+
+
+/* [ CUSTOMS ] */
+.flex-center {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+
+/* [ MAIN ] */
+.controls {
+    width: var(--w);
+    padding: 15px 0;
+}
+.controls button {
+    width: calc( var(--w) / 2 - 30px ); height: 42px;
+    margin: 0 10px;
+    font-size: 1.7rem;
+    border: none;
+    outline: none;
+    color: var(--text);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: opacity 0.25s;
+}
+.controls button:hover {
+    opacity: 0.8;
+}
+.controls button:active {
+    opacity: 0.9;
+}
+
+.controls button.get-answers {
+    background: var(--secondary);
+    box-shadow: 0 0 7px 1px rgba(35, 164, 237, 0.45);
+}
+.controls button.solve-test {
+    background: var(--primary);
+    box-shadow: 0 0 7px 1px rgba(92, 199, 141, 0.45);
+}

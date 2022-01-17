@@ -4,9 +4,9 @@
     "name": "LMS Test Solver",
     "description": "Boost tests solving!",
     "version": "1.0.0",
-    "icons": { "128": "icon_128.png" },
+    "icons": { "128": "solver-fav.png" },
     "browser_action": {
-      "default_icon": "icon.png",
+      "default_icon": "solver-fav.png",
       "default_popup": "app.html"
     },
     "permissions": ["activeTab"]
