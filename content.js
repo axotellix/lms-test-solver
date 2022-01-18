@@ -32,15 +32,14 @@ const solveTest = () => {
     let is_found = false
 
     test?.options.forEach(opt => {
-        if ( is_found ) {
-            alert('no answer found')
-            return
-        }
+        if ( is_found ) return
+
         for( let i = 0 ; i < sessionStorage.length ; i++ ) {
             let q = sessionStorage.key(i)
             let a = sessionStorage.getItem(q)
+            a = a.replace('Правильный ответ: ', '')
 
-            if ( q == question && a.match(opt.textContent) ) {
+            if ( q == question && a == opt.textContent ) {
                 let input = opt.parentNode.parentNode.querySelector('input')
                 input.checked = true
                 is_found = true
@@ -48,6 +47,8 @@ const solveTest = () => {
             }
         }
     })
+
+    if ( !is_found ) alert('no answer found')
     
 }
 const runTask = ( task, sender, sendResponse ) => {
